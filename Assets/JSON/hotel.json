@@ -1,0 +1,146 @@
+[
+  {
+    "continent": "Asia",
+    "country": "Japan",
+    "city": "Tokyo",
+    "tourist_spot": {
+      "id": "jp-tokyo-mount-fuji",
+      "name": "Mount Fuji",
+      "description": "Iconic mountain and popular climbing destination with stunning views.",
+      "photo": "images/Mount Fuji.avif",
+      "geo_location": {
+        "latitude": 35.3606,
+        "longitude": 138.7274
+      },
+      "nearby_hotel": {
+        "id": "fuji-view-hotel",
+        "name": "Fuji View Hotel",
+        "address": "5 Fuji St, Tokyo, Japan",
+        "geo_location": {
+          "latitude": 35.361,
+          "longitude": 138.728
+        }
+      }
+    }
+  },
+  {
+    "continent": "Australia",
+    "country": "Australia",
+    "city": "Sydney",
+    "tourist_spot": {
+      "id": "au-sydney-opera-house",
+      "name": "Sydney Opera House",
+      "description": "World-famous performing arts venue and architectural marvel.",
+      "photo": "images/Sydney Opera House.avif",
+      "geo_location": {
+        "latitude": -33.8568,
+        "longitude": 151.2153
+      },
+      "nearby_hotel": {
+        "id": "harbour-view-hotel",
+        "name": "Harbour View Hotel",
+        "address": "200 Opera St, Sydney, Australia",
+        "geo_location": {
+          "latitude": -33.857,
+          "longitude": 151.216
+        }
+      }
+    }
+  },
+  {
+    "continent": "Europe",
+    "country": "France",
+    "city": "Paris",
+    "tourist_spot": {
+      "id": "fr-paris-eiffel-tower",
+      "name": "Eiffel Tower",
+      "description": "Iconic tower offering panoramic views of Paris and the Seine River.",
+      "photo": "images/Eiffel Tower.avif",
+      "geo_location": {
+        "latitude": 48.8584,
+        "longitude": 2.2945
+      },
+      "nearby_hotel": {
+        "id": "eiffel-hotel",
+        "name": "Eiffel Hotel",
+        "address": "10 Eiffel Rd, Paris, France",
+        "geo_location": {
+          "latitude": 48.859,
+          "longitude": 2.295
+        }
+      }
+    }
+  },
+  {
+    "continent": "North America",
+    "country": "United States",
+    "city": "New York",
+    "tourist_spot": {
+      "id": "us-ny-statue-liberty",
+      "name": "Statue of Liberty",
+      "description": "A colossal statue symbolizing freedom and democracy.",
+      "photo": "images/Statue of Liberty.avif",
+      "geo_location": {
+        "latitude": 40.6894,
+        "longitude": -74.1775
+      },
+      "nearby_hotel": {
+        "id": "liberty-hotel",
+        "name": "Liberty Hotel",
+        "address": "100 Liberty St, New York, USA",
+        "geo_location": {
+          "latitude": 40.690,
+          "longitude": -74.178
+        }
+      }
+    }
+  },
+  {
+    "continent": "South America",
+    "country": "Brazil",
+    "city": "Rio de Janeiro",
+    "tourist_spot": {
+      "id": "br-rio-christ-redeemer",
+      "name": "Christ the Redeemer",
+      "description": "A colossal statue of Jesus Christ located atop Mount Corcovado.",
+      "photo": "images/Christ the Redeemer.avif",
+      "geo_location": {
+        "latitude": -22.9519,
+        "longitude": -43.2105
+      },
+      "nearby_hotel": {
+        "id": "redeemer-hotel",
+        "name": "Redeemer Hotel",
+        "address": "100 Christ Rd, Rio de Janeiro, Brazil",
+        "geo_location": {
+          "latitude": -22.952,
+          "longitude": -43.211
+        }
+      }
+    }
+  },
+  {
+    "continent": "Antarctica",
+    "country": "South Pole",
+    "city": "South Pole",
+    "tourist_spot": {
+      "id": "ant-south-pole",
+      "name": "South Pole",
+      "description": "The southernmost point on Earth, offering a unique and extreme travel experience.",
+      "photo": "images/South Pole.avif",
+      "geo_location": {
+        "latitude": -90.0000,
+        "longitude": 0.0000
+      },
+      "nearby_hotel": {
+        "id": "ice-explorer-lodge",
+        "name": "Ice Explorer Lodge",
+        "address": "1 Ice Rd, South Pole, Antarctica",
+        "geo_location": {
+          "latitude": -89.999,
+          "longitude": 0.000
+        }
+      }
+    }
+  }
+]

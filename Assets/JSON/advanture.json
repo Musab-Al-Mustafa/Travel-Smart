@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Adventure Package 1: Island Hopper",
+    "destination": "Bali, Indonesia",
+    "duration": "7 nights/8 days",
+    "activities": [
+      "Snorkeling and diving in Nusa Dua",
+      "Relaxation on the beautiful beaches of Seminyak",
+      "Visit to the famous Uluwatu Temple",
+      "Traditional Balinese dance performances"
+    ],
+    "accommodation": "4-star beachfront resort",
+    "price": 2500,
+    "image": "img/advanture 1.jfif"
+  },
+  {
+    "name": "Adventure Package 2: Mountain Explorer",
+    "destination": "Queenstown, New Zealand",
+    "duration": "10 nights/11 days",
+    "activities": [
+      "Hiking on the famous Routeburn Track",
+      "Bungee jumping and skydiving",
+      "Visit to the stunning Milford Sound",
+      "White water rafting and jet boating"
+    ],
+    "accommodation": "3-star adventure lodge",
+    "price": 3500,
+    "image": "img/advanture 2.jfif"
+  },
+  {
+    "name": "Adventure Package 3: Desert Adventure",
+    "destination": "Marrakech, Morocco",
+    "duration": "8 nights/9 days",
+    "activities": [
+      "Camel trekking in the Sahara Desert",
+      "Visit to the famous Jardin Majorelle",
+      "Explore the bustling souks of Marrakech",
+      "Relaxation in a traditional riad"
+    ],
+    "accommodation": "4-star riad",
+    "price": 2800,
+    "image": "img/advanture 3.jfif"
+  }  
+  
+]

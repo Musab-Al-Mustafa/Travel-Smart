@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "image": "img/transportation1.jpg",
+    "name": "Sunset Getaway",
+    "type": "Bus",
+    "route": "New York to Los Angeles",
+    "duration": "5 days",
+    "activities": ["Visit the Grand Canyon", "Explore the Golden Gate Bridge", "Walk on the Hollywood Walk of Fame"],
+    "price": 500
+  },
+  {
+    "id": 2,
+    "image": "img/transportation2.jpg",
+    "name": "Midwest Explorer",
+    "type": "Train",
+    "route": "Chicago to San Francisco",
+    "duration": "7 days",
+    "activities": ["Visit the Willis Tower", "Explore the Millennium Park", "Take a stroll along the Lake Michigan shoreline"],
+    "price": 700
+  },
+  {
+    "id": 3,
+    "image": "img/transportation3.jpg",
+    "name": "Coastal Cruiser",
+    "type": "Flight",
+    "route": "Miami to Las Vegas",
+    "duration": "3 days",
+    "activities": ["Visit the South Beach", "Explore the Art Deco District", "Take a helicopter tour of the Grand Canyon"],
+    "price": 300
+  },
+  {
+    "id": 4,
+    "image": "img/transportation4.jpg",
+    "name": "Island Hopper",
+    "type": "Cruise",
+    "route": "Caribbean Islands",
+    "duration": "10 days",
+    "activities": ["Snorkel in the Bahamas", "Explore the Mayan Ruins", "Relax on the beach in Jamaica"],
+    "price": 1000
+  },
+  {
+    "id": 5,
+    "image": "img/transportation5.jpg",
+    "name": "Mountain Majesty",
+    "type": "Helicopter",
+    "route": "Grand Canyon to Yellowstone",
+    "duration": "5 days",
+    "activities": ["Fly over the Grand Canyon", "Explore the Yellowstone National Park", "Take a scenic hike in the Rocky Mountains"],
+    "price": 800
+  },
+  {
+    "id": 6,
+    "image": "img/transportation6.jpg",
+    "name": "Mediterranean Odyssey",
+    "type": "Yacht",
+    "route": "Mediterranean Sea",
+    "duration": "14 days",
+    "activities": ["Visit the ancient city of Athens", "Explore the Amalfi Coast", "Relax on the beach in Ibiza"],
+    "price": 1500
+  }
+  
+]

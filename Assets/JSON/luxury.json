@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Luxury Package 1: Royal Retreat",
+    "destination": "Bora Bora, French Polynesia",
+    "duration": "7 nights/8 days",
+    "activities": [
+      "Relaxation in an overwater bungalow",
+      "Snorkeling and diving in the crystal-clear lagoon",
+      "Sunset cruise with champagne and canapés",
+      "Private beach dinner with personalized butler service"
+    ],
+    "accommodation": "5-star luxury resort",
+    "price": 8000,
+    "image": "img/luxury 1.jpg"
+  },
+  {
+    "name": "Luxury Package 2: African Safari",
+    "destination": "Maasai Mara, Kenya",
+    "duration": "7 nights/8 days",
+    "activities": [
+      "Game drives in the Maasai Mara National Reserve",
+      "Hot air balloon ride over the savannah",
+      "Private bush dinner with personalized guide",
+      "Relaxation at a luxury safari lodge"
+    ],
+    "accommodation": "Luxury safari lodge",
+    "price": 6000,
+    "image": "img/luxury 2.jpg"
+  },
+  {
+    "name": "Luxury Package 3: Italian Getaway",
+    "destination": "Tuscany, Italy",
+    "duration": "7 nights/8 days",
+    "activities": [
+      "Private wine tasting at a local vineyard",
+      "Visit to the Uffizi Gallery in Florence",
+      "Relaxation at a luxury villa with private pool",
+      "Private cooking class with a local chef"
+    ],
+    "accommodation": "Luxury villa",
+    "price": 5000,
+    "image": "img/luxury 3.jpg"
+  }
+ 
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Fun in the Sun",
+    "destination": "Hawaii, USA",
+    "duration": "7 nights/8 days",
+    "activities": [
+      "Snorkeling and swimming with sea turtles",
+      "Visit to the famous Waikiki Beach",
+      "Luaus and traditional Hawaiian dance performances",
+      "Volcano National Park tour"
+    ],
+    "accommodation": "4-star beachfront resort",
+    "price": 2500,
+    "image": "1.jpg"
+  },
+  {
+    "name": "European Adventure",
+    "destination": "London, Paris, and Amsterdam",
+    "duration": "10 nights/11 days",
+    "activities": [
+      "Visit to Buckingham Palace and the Tower of London",
+      "Explore the Louvre Museum and the Eiffel Tower",
+      "Canal boat tour in Amsterdam",
+      "Visit to the famous Anne Frank House"
+    ],
+    "accommodation": "3-star city-center hotels",
+    "price": 3500,
+    "image": "img/family 1.jpg"
+  },
+  {
+    "name": "Wildlife Safari",
+    "destination": "South Africa",
+    "duration": "9 nights/10 days",
+    "activities": [
+      "Guided safari tours in Kruger National Park",
+      "Visit to the famous Cape of Good Hope",
+      "Wine tasting in Stellenbosch",
+      "Shark cage diving (optional)"
+    ],
+    "accommodation": "4-star safari lodge",
+    "price": 4000,
+    "image": "img/family 3.jpg"
+  }
+]

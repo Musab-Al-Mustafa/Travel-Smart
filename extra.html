@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventure Packages</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .controls {
+            margin-bottom: 20px;
+        }
+        #searchInput, #sortSelect, #difficultyFilter {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        #packageContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .package-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        .package-card h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .package-card p {
+            margin: 5px 0;
+        }
+        .package-card .price {
+            font-weight: bold;
+            color: #007bff;
+        }
+        @media (max-width: 768px) {
+            .package-card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .package-card {
+                width: 100%;
+            }
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search packages...">
+        <select id="sortSelect">
+            <option value="name">Sort by Name</option>
+            <option value="price">Sort by Price</option>
+            <option value="duration">Sort by Duration</option>
+        </select>
+        <select id="difficultyFilter">
+            <option value="all">All Difficulties</option>
+            <option value="Easy">Easy</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Challenging">Challenging</option>
+        </select>
+    </div>
+    <div id="packageContainer"></div>
+
+    <script>
+        const packagesData = {
+            "adventurePackages": [
+                {
+                    "id": 1,
+                    "name": "Mountain Explorer",
+                    "location": "Rocky Mountains",
+                    "duration": "5 days",
+                    "difficulty": "Moderate",
+                    "price": 1200,
+                    "activities": ["Hiking", "Rock Climbing", "Camping"],
+                    "description": "Experience the majestic Rocky Mountains with guided hikes and thrilling rock climbing sessions."
+                },
+                {
+                    "id": 2,
+                    "name": "Tropical Paradise",
+                    "location": "Bali, Indonesia",
+                    "duration": "7 days",
+                    "difficulty": "Easy",
+                    "price": 1800,
+                    "activities": ["Snorkeling", "Surfing", "Beach Yoga"],
+                    "description": "Relax and adventure in the beautiful island of Bali with crystal clear waters and lush jungles."
+                },
+                {
+                    "id": 3,
+                    "name": "Arctic Expedition",
+                    "location": "Svalbard, Norway",
+                    "duration": "10 days",
+                    "difficulty": "Challenging",
+                    "price": 3500,
+                    "activities": ["Dog Sledding", "Ice Caving", "Northern Lights Viewing"],
+                    "description": "Embark on a once-in-a-lifetime journey to the Arctic, experiencing the polar night and stunning aurora borealis."
+                },
+                {
+                    "id": 4,
+                    "name": "Safari Adventure",
+                    "location": "Serengeti, Tanzania",
+                    "duration": "6 days",
+                    "difficulty": "Easy",
+                    "price": 2800,
+                    "activities": ["Game Drives", "Hot Air Balloon Ride", "Maasai Village Visit"],
+                    "description": "Witness the incredible wildlife of Africa in their natural habitat during this unforgettable safari experience."
+                },
+                {
+                    "id": 5,
+                    "name": "Amazon Rainforest Expedition",
+                    "location": "Manaus, Brazil",
+                    "duration": "8 days",
+                    "difficulty": "Moderate",
+                    "price": 2200,
+                    "activities": ["Jungle Trekking", "Canopy Walks", "River Cruises"],
+                    "description": "Explore the world's largest rainforest and discover its rich biodiversity and indigenous cultures."
+                },
+                {
+                    "id": 6,
+                    "name": "New Zealand Adrenaline Rush",
+                    "location": "Queenstown, New Zealand",
+                    "duration": "9 days",
+                    "difficulty": "Challenging",
+                    "price": 2600,
+                    "activities": ["Bungee Jumping", "Skydiving", "White Water Rafting"],
+                    "description": "Get your heart racing with extreme sports in the adventure capital of the world."
+                },
+                {
+                    "id": 7,
+                    "name": "Historical Europe Tour",
+                    "location": "Multiple Cities, Europe",
+                    "duration": "14 days",
+                    "difficulty": "Easy",
+                    "price": 3800,
+                    "activities": ["Guided Tours", "Museum Visits", "Local Cuisine Tasting"],
+                    "description": "Journey through time as you visit iconic landmarks and immerse yourself in the rich history of European cities."
+                },
+                {
+                    "id": 8,
+                    "name": "Inca Trail to Machu Picchu",
+                    "location": "Cusco, Peru",
+                    "duration": "4 days",
+                    "difficulty": "Challenging",
+                    "price": 1500,
+                    "activities": ["Trekking", "Camping", "Archaeological Site Visits"],
+                    "description": "Hike the famous Inca Trail and end your journey at the breathtaking ancient city of Machu Picchu."
+                }
+            ]
+        };
+
+        const packageContainer = document.getElementById('packageContainer');
+        const searchInput = document.getElementById('searchInput');
+        const sortSelect = document.getElementById('sortSelect');
+        const difficultyFilter = document.getElementById('difficultyFilter');
+
+        function renderPackages(packages) {
+            packageContainer.innerHTML = '';
+            packages.forEach(pkg => {
+                const card = document.createElement('div');
+                card.className = 'package-card';
+                card.innerHTML = `
+                    <h2>${pkg.name}</h2>
+                    <p><strong>Location:</strong> ${pkg.location}</p>
+                    <p><strong>Duration:</strong> ${pkg.duration}</p>
+                    <p><strong>Difficulty:</strong> ${pkg.difficulty}</p>
+                    <p class="price"><strong>Price:</strong> $${pkg.price}</p>
+                    <p><strong>Activities:</strong> ${pkg.activities.join(', ')}</p>
+                    <p>${pkg.description}</p>
+                `;
+                packageContainer.appendChild(card);
+            });
+        }
+
+        function filterPackages() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const difficulty = difficultyFilter.value;
+            const filteredPackages = packagesData.adventurePackages.filter(pkg => 
+                (pkg.name.toLowerCase().includes(searchTerm) ||
+                pkg.location.toLowerCase().includes(searchTerm) ||
+                pkg.description.toLowerCase().includes(searchTerm)) &&
+                (difficulty === 'all' || pkg.difficulty === difficulty)
+            );
+            return filteredPackages;
+        }
+
+        function sortPackages(packages) {
+            const sortBy = sortSelect.value;
+            return packages.sort((a, b) => {
+                if (sortBy === 'price') {
+                    return a.price - b.price;
+                } else if (sortBy === 'duration') {
+                    return parseInt(a.duration) - parseInt(b.duration);
+                } else {
+                    return a.name.localeCompare(b.name);
+                }
+            });
+        }
+
+        function updateDisplay() {
+            let filteredPackages = filterPackages();
+            filteredPackages = sortPackages(filteredPackages);
+            renderPackages(filteredPackages);
+        }
+
+        searchInput.addEventListener('input', updateDisplay);
+        sortSelect.addEventListener('change', updateDisplay);
+        difficultyFilter.addEventListener('change', updateDisplay);
+
+        // Initial render
+        updateDisplay();
+    </script> -->
+
+
+    <!-- Search and Filters -->
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search by name or destination...">
+            </div>
+            <div class="col-md-3">
+                <select id="priceFilter" class="form-control">
+                    <option value="all">All Prices</option>
+                    <option value="low">Below $3000</option>
+                    <option value="mid">$3000 - $5000</option>
+                    <option value="high">Above $5000</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="sortPrice" class="form-control">
+                    <option value="none">Sort by Price</option>
+                    <option value="asc">Price: Low to High</option>
+                    <option value="desc">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Package Sections -->
+    <section id="package-sections" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Travel Packages</h2>
+            <div class="row" id="package-container">
+                <!-- All packages (family, cultural, adventure, luxury) will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for fetching data, search, filtering, and sorting -->
+    <script>
+        let packages = [];
+
+        // Fetching data from all JSON files
+        Promise.all([
+            fetch("family.json").then(res => res.json()),
+            fetch("cultural.json").then(res => res.json()),
+            fetch("adventure.json").then(res => res.json()),
+            fetch("luxury.json").then(res => res.json())
+        ]).then((results) => {
+            packages = [].concat(...results); // Combine all package arrays
+            displayPackages(packages); // Display all packages initially
+        });
+
+        // Function to display packages
+        function displayPackages(filteredPackages) {
+            let packageData = "";
+            filteredPackages.forEach(package => {
+                packageData += `
+                <div class="col-lg-4 mb-4">
+                    <div class="card" style="width: 22rem;">
+                        <img src="${package.image}" class="card-img-top" alt="${package.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${package.name}</h5>
+                            <p class="card-text">Destination: ${package.destination}</p>
+                            <p class="card-text">Duration: ${package.duration}</p>
+                            <p class="card-text">Activities: ${package.activities.join(', ')}</p>
+                            <p class="card-text">Accommodation: ${package.accommodation}</p>
+                            <p class="card-text">Price: $${package.price}</p>
+                            <a href="#" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>`;
+            });
+            document.getElementById("package-container").innerHTML = packageData;
+        }
+
+        // Search functionality
+        document.getElementById("searchInput").addEventListener("input", function() {
+            const searchTerm = this.value.toLowerCase();
+            const filteredPackages = packages.filter(p => 
+                p.name.toLowerCase().includes(searchTerm) || 
+                p.destination.toLowerCase().includes(searchTerm)
+            );
+            displayPackages(filteredPackages);
+        });
+
+        // Filtering by price range
+        document.getElementById("priceFilter").addEventListener("change", function() {
+            const priceRange = this.value;
+            let filteredPackages = packages;
+
+            if (priceRange === "low") {
+                filteredPackages = packages.filter(p => p.price < 3000);
+            } else if (priceRange === "mid") {
+                filteredPackages = packages.filter(p => p.price >= 3000 && p.price <= 5000);
+            } else if (priceRange === "high") {
+                filteredPackages = packages.filter(p => p.price > 5000);
+            }
+
+            displayPackages(filteredPackages);
+        });
+
+        // Sorting by price
+        document.getElementById("sortPrice").addEventListener("change", function() {
+            const sortOrder = this.value;
+            let sortedPackages = [...packages];
+
+            if (sortOrder === "asc") {
+                sortedPackages.sort((a, b) => a.price - b.price);
+            } else if (sortOrder === "desc") {
+                sortedPackages.sort((a, b) => b.price - a.price);
+            }
+
+            displayPackages(sortedPackages);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+
+/* Navbar start */
+.nav-item .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: 1 ease;
+    
+}
+
+.size img{
+    height: 250px;
+    width: 350px;
+}
+
+/* navbar end */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+}
+
+:root {
+    --primary-color: #5cadf8fc;
+    --hover-color: #ff6347;
+    --text-color: #f9f9f9;
+    --background-color: #ffffff;
+}
+
+/* Home Section Start */
+.home {
+    width: 100%;
+    height: 700px;
+    background-image: url(../images/slider/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home .content {
+    text-align: center;
+    padding-top: 200px;
+}
+
+.home .content h5 {
+    font-size: 4vw;
+    color: var(--text-color);
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+}
+
+.home .content h1 {
+    font-size: 8vw;
+    color: var(--text-color);
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+}
+
+.changecontent::after {
+    content: '';
+    color: var(--primary-color);
+    text-shadow: 0px 1px 1px black;
+    animation: changetext 20s ease-in-out infinite;
+    transition: 2s;
+    animation-delay: 2s;
+}
+
+@keyframes changetext {
+    0% { content: "Africa"; }
+    20% { content: "North America"; }
+    40% { content: "South America"; }
+    60% { content: "Asia"; }
+    80% { content: "Australia"; }
+    100% { content: "Europe"; }
+}
+
+.home .content p {
+    color: var(--text-color);
+    font-size: 1.5vw;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.home .content a {
+    padding: 10px;
+    background: var(--background-color);
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 550;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.home .content a:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Focus Styles */
+.home .content a:focus,
+.booking .btn-primary:focus {
+    outline: 2px solid var(--hover-color);
+    outline-offset: 2px;
+}
+
+
+.about-contact {
+    background-color: #f9f9f9; /* Light background for the section */
+}
+
+.about-text {
+    border-radius: 10px; /* Round the corners */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; /* Add shadow for depth */
+}
+
+.about-text h1,
+.about-text h3 {
+    color: #5cadf8fc; /* Primary theme color for headings */
+}
+
+.about-text p {
+    color: #333; /* Darker text for better readability */
+    line-height: 1.6; /* Improved spacing */
+}
+
+.about-text ul {
+    margin-top: 10px; /* Space above the list */
+}
+
+.about-text ul li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+.about-contact .container h3 {
+    text-align: center; /* Center align contact info heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.about-contact a {
+    color: #5cadf8fc; /* Link color */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.about-contact a:hover {
+    color: #ff6347; /* Change link color on hover */
+}
+
+
+
+/* Destination Section Styles */
+.destination-items {
+    margin-top: 50px; /* Space above the section */
+}
+
+.destination-item {
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; /* Shadow for depth */
+    transition: transform 0.3s; /* Smooth scaling effect */
+}
+
+.destination-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.destination-overlay {
+    position: absolute; /* Overlay the text */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: flex; /* Center content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    color: var(--text-color); /* Use theme text color */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.destination-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
+
+.destination-overlay h5 {
+    font-size: 1.5rem; /* Font size for destination name */
+    color: var(--text-color); /* Theme text color */
+}
+
+.destination-overlay span {
+    font-size: 1rem; /* Font size for additional info */
+    color: var(--text-color); /* Theme text color */
+}
+
+/* Adjusting images to fit the theme */
+.destination-item img {
+    transition: transform 0.5s; /* Smooth transition for images */
+}
+
+.destination-item img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* sevivces section start */
+.services {
+    background: #f9f9f9;
+    margin-top: 50px;
+}
+
+.services .card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: none;
+}
+
+.services .card i {
+    font-size: 80px;
+    text-align: center;
+    color: #5cadf8fc;
+    margin-top: 20px;
+}
+
+.services .card .card-body h3 {
+    font-weight: 600;
+}
+
+.services .card .card-body {
+    text-align: center;
+}
+
+/* packages section end */
+
+
+/* card section */
+.main-txt h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+}
+.main-txt h1 span {
+    color: #5cadf8fc;
+}
+.main-txt h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    text-shadow: 0px 1px 1px black;
+}
+
+.main-txt h1 span {
+    color: #5cadf8fc;
+}
+
+.packages .card {
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.packages .card img {
+    border-radius: 5px;
+}
+
+.packages .card .card-body h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.packages .card .card-body p {
+    font-size: 15px;
+}
+/* card section  end*/
+/* Registration section start  */
+
+.bg-registration h1 {
+    font-weight: 600; /* Bold for emphasis */
+}
+
+.bg-registration p {
+    line-height: 1.6; /* Improved readability */
+}
+
+.bg-registration .card {
+    border-radius: 10px; /* Rounded corners for the card */
+}
+
+.bg-registration .card-header {
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top of the card */
+}
+
+.bg-registration .form-control {
+    border: 1px solid #5cadf8fc; /* Primary color border */
+}
+
+.bg-registration .form-control:focus {
+    border-color: #ff6347; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(92, 173, 248, 0.5); /* Subtle glow on focus */
+}
+
+.bg-registration .custom-select {
+    border: 1px solid #5cadf8fc; /* Primary color border */
+}
+
+.bg-registration .btn-primary {
+    background-color: #5cadf8fc; /* Primary color button */
+    border: none; /* Remove border */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.bg-registration .btn-primary:hover {
+    background-color: #ff6347; /* Change color on hover */
+}
+.bg-registration {
+    background-image:url("C:\Users\Admin\Desktop\Pleasant Tours\Assets\images\Hill-Stations\narn kaghan\naran kaghan 1.jpg"); /* Add your image URL */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Optional: for a parallax effect */
+}
+
+/* Section Gallary Start */
+.gallary {
+    margin-top: 50px;
+}
+
+.gallary .card {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+
+.gallary .card img {
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.gallary .card img:hover {
+    transform: scale(1.1);
+}
+
+/* Section Gallary End */
+
+/* feedbck stats here  */
+.feedback-container {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    padding: 50px 30px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.feedback-overlay {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white to ensure readability */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.feedback-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feedback-info h4 {
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-info ul {
+    margin-top: 20px;
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.feedback-info ul li {
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.feedback-form .form-control {
+    border: 2px solid var(--primary-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feedback-form .form-control:focus {
+    border-color: var(--hover-color);
+    box-shadow: 0 0 8px rgba(255, 99, 71, 0.2);
+}
+
+.feedback-form select {
+    border: 2px solid var(--primary-color);
+    padding: 10px;
+    background-color: white;
+}
+
+.submit-feedback {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+}
+
+.submit-feedback:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+}
+
+.feedback-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay on background image */
+    z-index: -1;
+    transition: background-color 0.3s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .feedback-container {
+        padding: 20px;
+    }
+
+    .feedback-info {
+        text-align: center;
+    }
+
+    .feedback-form .form-control,
+    .feedback-form .submit-feedback {
+        font-size: 14px;
+    }
+}
+
+/* Footer start */
+
+.footer {
+    background-color: #5cadf8fc;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 40px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+.footer h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #ffdd57;
+}
+
+.footer .fas {
+    margin-right: 10px;
+}
+
+.footer hr {
+    border-top: 1px solid #fff;
+    opacity: 0.3;
+}
+
+.footer .text-center {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer .text-center p {
+    margin: 0;
+    font-size: 14px;
+    color: #fff;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+/* Footer Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Footer End */

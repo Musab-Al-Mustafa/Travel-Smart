@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Cultural Package 1: Imperial China",
+    "destination": "Beijing, China",
+    "duration": "7 nights/8 days",
+    "activities": [
+      "Visit to the Great Wall of China",
+      "Explore the Forbidden City",
+      "Traditional Chinese tea ceremony",
+      "Peking opera performance"
+    ],
+    "accommodation": "5-star luxury hotel",
+    "price": 2800,
+    "image": "img/cultural 1.jfif"
+  },
+  {
+    "name": "Cultural Package 2: Indian Odyssey",
+    "destination": "Delhi, India",
+    "duration": "10 nights/11 days",
+    "activities": [
+      "Visit to the Taj Mahal",
+      "Explore the vibrant streets of Old Delhi",
+      "Traditional Indian cooking class",
+      "Visit to the Red Fort"
+    ],
+    "accommodation": "4-star heritage hotel",
+    "price": 2200,
+    "image": "img/cultural 2.jfif"
+  },
+  {
+    "name": "Cultural Package 3: Moroccan Mosaic",
+    "destination": "Marrakech, Morocco",
+    "duration": "8 nights/9 days",
+    "activities": [
+      "Explore the bustling souks of Marrakech",
+      "Visit to the famous Jardin Majorelle",
+      "Traditional Moroccan cooking class",
+      "Relaxation in a traditional riad"
+    ],
+    "accommodation": "4-star riad",
+    "price": 2500,
+    "image": "img/cultural 3.jfif"
+  }
+ 
+]
